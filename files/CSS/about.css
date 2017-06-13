@@ -1,4 +1,4 @@
-ody{
+body{
     font-family: "Futura", sans-serif;
 }
 *{
@@ -7,13 +7,13 @@ margin : 0px;
 }
 
 h1 {
-font-family: sans-serif;
+font-family: "Futura", sans-serif;
 font-size: 40px;
 color: purple;
 }
 
 p {
-font-family: sans-serif;
+font-family: "Futura"sans-serif;
 font-size: 20px;
 color: grey;
 }
