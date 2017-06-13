@@ -1,0 +1,174 @@
+body{
+    font-family: "Futura", sans-serif;
+}
+*{
+padding : 0px;
+margin : 0px;
+}
+.imagecontact {
+width: 100%; 
+height: 45%;
+}
+#maindiv{
+    width:100%;
+    height:100%;
+    background: #f3efef;
+}
+#navDiv{
+    opacity: 7;
+    filter:(opacity= 70);
+}
+#navDiv ul{
+    width: 100%;
+    height : 100px;
+    background: #f3efef;
+    line-height:100px;
+    color: #a07575;
+    margin-right:15px;
+}
+
+#navDiv ul a{
+    text-decoration:none;
+    color:#a07575;
+    padding: 25px;
+}
+#navDiv ul li{
+ list-style-type: none;
+ display: inline-block;
+ float: right;
+ font-size: 1.2em;
+}
+#navDiv ul li:hover {
+    background: #dec7c7;
+    transition:all 0.4s; 
+}
+#navDiv p{
+    width: 500px;
+    float:left;
+    font-size:1.7em;
+    cursor: pointer;
+    margin-left:15px;
+}
+
+#container{
+    width: 100%;
+    height: 450px;
+    border : 0px solid #f3efef;
+    margin:0 auto;
+    position: relative;
+}
+#container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#container > .btn{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    top: 200px;
+    background: #f3efef;
+    color: #a07575;
+    font-size: 20px;
+}
+#container > #btn1:hover{
+box-shadow: 10px 0px 20px 0px #a07575;
+}
+#container > #btn2{
+    position: relative; 
+    float: right;
+}
+#container > #btn2:hover{
+box-shadow: -10px 0px 20px 0px #a07575;
+}
+
+#footer ul {
+    width: 100%;
+    height : 200px;
+    background: #f3efef;
+    line-height:40px;
+    color: #a07575;
+    text-align: center; 
+    margin-top: 40px;
+}
+#footer ul li{
+ font-size: 0.8em;
+ text-decoration: none;
+ list-style-type: none;
+}
+#footer ul li:hover {
+    
+    background: #dec7c7;
+    transition:all 0.4s; 
+}
+#footer p{
+    font-size:1.1em;
+    text-align: center;
+    cursor: pointer;
+}
+#footer img{
+    width: 2%;
+    height: 10%;
+    margin-right:15px;
+}
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text fields */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+}
+
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+.button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+  
+}
+
