@@ -11,6 +11,11 @@ app.get('/', function (req, res) {
     res.render('home', {userName:"Vanessa"});
 });
 
+
+app.get("/fetchdemo/:nbreview", function(req,res){
+    res.send({msg:"I got your " + req.params.nbreview});
+});
+
 app.get('/about', function(req,res){
     res.render('about',{userName:"Vanessa"});
 });

@@ -1,4 +1,12 @@
-
+    <script>
+        function sendMessage(msg){
+            fetch('/fetchdemo/'+msg).then(function(res){
+                res.json().then(function(json) {
+                    alert(json.msg);
+                });
+            })
+        }
+    </script>    
 
     <title>Northern Valley - Shop</title>
   
@@ -51,7 +59,7 @@
 </p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
+                                <p class="pull-right" onclick="sendMessage('12 reviews')">12 reviews</p>
                                 <p>
                                      <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
