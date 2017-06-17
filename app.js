@@ -27,5 +27,8 @@ app.get('/shop', function(req,res){
 app.get('/contact', function(req,res){
     res.render('contact',{userName:"Vanessa"});
 }); 
+app.get('/people', function(req,res){
+    res.render('people',{userName:"Vanessa"});
+}); 
 
 app.listen(3025);
