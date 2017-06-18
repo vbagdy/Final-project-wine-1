@@ -241,15 +241,19 @@ textarea {
   height: 5em;
 }
 
-.button {
-  /* To position the buttons to the same position of the text fields */
-  padding-left: 220px; /* same size as the label elements */
-
-}
-
-.button {
-  /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-  margin-left:.5em;
+.button1 {
   
+    margin-left: 175px;
+    background-color: #f3efef; 
+    font-size: 20px;
+    color: #a07575;
+    padding: 14px 40px;
+    border-radius: 8px;
+    border: 2px solid #a07575; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
 }
+
