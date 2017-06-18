@@ -116,7 +116,7 @@ box-shadow: -10px 0px 20px 0px #a07575;
 form {
   /* Just to center the form on the page */
   margin: 0 auto;
-  width: 400px;
+  width: 500px;
   /* To see the outline of the form */
   padding: 1em;
   border: 1px solid #CCC;
