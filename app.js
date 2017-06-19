@@ -1,34 +1,36 @@
-var MongoClient = require('mongodb').MongoClient
+/*var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
 // Connection URL
 var url = 'mongodb://essec:cergyisc00l@138.68.110.210.27017/admin?readPreference=primary';
+
 // Use connect method to connect to the Server
 MongoClient.connect(url, function(err, db) {
  // assert.equal(null, err);
   console.log("Connected mongodb",err);
-
   //insertDocuments(db, function() {
    // db.close();
- // });
-
-router.post('/insert', function(req,res,next){
+  });
+app.post('/action_page', function(req,res,next){
     var item ={
-        email:req.body.email,
-        lastname: req.body.lastname,
+        email: req.body.email,
         firstname: req.body.firstname,
-        address: req.body.firstname,
-        choice: req.body.firstname,
-        quantity: req.body.firstname,
+        lastname: req.body.lastname,
+        address: req.body.address,
+        choice: req.body.choice,
+        quantity: req.body.quantity,
     };
+  
     mongo.connect(url,function(err,db){
         assert.equal(null,err);
-        db.collection('orderform').insertOne(item,function(err,result){
+        db.collection('order-form').insertOne(item,function(err,result){
             assert.equal(null.err);
             console.log('Item Inserted');
-        });
+            db.close();
+         });
     });
-
+    res.redirect('/');
+}); */
 var express = require('express');
 var exphbs  = require('express-handlebars');
 
