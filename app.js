@@ -31,4 +31,8 @@ app.get('/people', function(req,res){
     res.render('people',{userName:"Vanessa"});
 }); 
 
+app.get("/order",function(req,res){
+    res.render('order',{userName:"Vanessa"});
+});
+
 app.listen(3025);
