@@ -322,7 +322,25 @@ input:focus, textarea:focus {
     background-color: #a07575;
 }
 
+<<<<<<< HEAD
 .imageorders {
 width:100%;
 height:100%
+=======
+
+/* Thank you page design */
+
+#h1thankyou {
+font-family: "Futura",sans-serif;
+font-size: 60px;
+color: #a07575;
+text-align : center;
+}
+
+#pthankyou {
+font-family: "Futura",sans-serif;
+font-size: 40px;
+color: grey;
+text-align : center;
+>>>>>>> origin/master
 }
