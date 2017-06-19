@@ -1,3 +1,22 @@
+
+router.post('/insert', function(req,res,next){
+    var item ={
+        email:req.body.email,
+        lastname: req.body.lastname,
+        firstname: req.body.firstname,
+        address: req.body.firstname,
+        choice: req.body.firstname,
+        quantity: req.body.firstname,
+    };
+    mongo.connect(url,function(err,db{
+        assert.equal(null,err);
+        db.collection('orderform').insertOne(item,function(err,result){
+            assert.equal(null.err);
+            console.log('Item Inserted');
+        })
+    })
+});
+
 var express = require('express');
 var exphbs  = require('express-handlebars');
 
