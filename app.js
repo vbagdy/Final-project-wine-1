@@ -1,3 +1,16 @@
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+
+// Connection URL
+var url = 'mongodb://essec:cergyisc00l@138.68.110.210.27017/admin?readPreference=primary';
+// Use connect method to connect to the Server
+MongoClient.connect(url, function(err, db) {
+ // assert.equal(null, err);
+  console.log("Connected mongodb",err);
+
+  //insertDocuments(db, function() {
+   // db.close();
+ // });
 
 router.post('/insert', function(req,res,next){
     var item ={
@@ -8,14 +21,13 @@ router.post('/insert', function(req,res,next){
         choice: req.body.firstname,
         quantity: req.body.firstname,
     };
-    mongo.connect(url,function(err,db{
+    mongo.connect(url,function(err,db){
         assert.equal(null,err);
         db.collection('orderform').insertOne(item,function(err,result){
             assert.equal(null.err);
             console.log('Item Inserted');
-        })
-    })
-});
+        });
+    });
 
 var express = require('express');
 var exphbs  = require('express-handlebars');
