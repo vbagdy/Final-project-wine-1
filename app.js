@@ -1,19 +1,14 @@
 
 
-/*var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+var MongoClient = require('mongodb').MongoClient;
 
 // Connection URL
-var url = 'mongodb://essec:cergyisc00l@138.68.110.210.27017/admin?readPreference=primary';
+var url = 'mongodb://essec:cergyisc00l@138.68.110.210:27017/admin?readPreference=primary';
 
 // Use connect method to connect to the Server
-MongoClient.connect(url, function(err, db) {
- // assert.equal(null, err);
-  console.log("Connected mongodb",err);
-  //insertDocuments(db, function() {
-   // db.close();
-  });
-app.post('/action_page', function(req,res,next){
+
+
+/*app.post('/action_page', function(req,res,next){
     var item ={
         email: req.body.email,
         firstname: req.body.firstname,
@@ -33,11 +28,17 @@ app.post('/action_page', function(req,res,next){
     });
     res.redirect('/');
 }); */
+
 var express = require('express');
 var exphbs  = require('express-handlebars');
+var bodyParser = require('body-parser');
 
 var app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 app.use(express.static('files'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -70,7 +71,24 @@ app.get("/order",function(req,res){
     res.render('order',{userName:"Vanessa"});
 });
 
-app.get("/thanks",function(req,res){
-    res.render('thanks',{userName:"Vanessa"});
-});
+MongoClient.connect(url, function(err, db) {
+    console.log("Connection",err);
+    var collection = db.collection("order-form");
+
+    app.post("/thanks",function(req,res){
+        var item ={
+            email: req.body.email,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            address: req.body.address,
+            choice: req.body.choice,
+            quantity: req.body.quantity,
+        };
+        collection.insert(item,function(err, result){
+            res.render('thanks',{userName:"Vanessa"});
+        });
+    });
+  });
+
+
 app.listen(3025);
