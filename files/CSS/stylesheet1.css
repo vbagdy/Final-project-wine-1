@@ -318,30 +318,38 @@ input:focus, textarea:focus {
 
 }
 
+.imageorders{
+    width: 100%; 
+height: 45%;
+}
+
 
 .form input[type=submit]:hover {
     background-color: #a07575;
 }
 
-<<<<<<< HEAD
-.imageorders {
-width:100%;
-height:100%
-=======
 
 /* Thank you page design */
 
 #h1thankyou {
 font-family: "Futura",sans-serif;
-font-size: 60px;
+font-size: 40px;
 color: #a07575;
 text-align : center;
+
 }
 
 #pthankyou {
 font-family: "Futura",sans-serif;
-font-size: 40px;
+font-size: 20px;
 color: grey;
 text-align : center;
->>>>>>> origin/master
+ 
+}
+.thanks{
+    width:100%;
+    height:700px;
+    background: #FFFFFF;
+    align-items: center;
+    padding: 275px;
 }

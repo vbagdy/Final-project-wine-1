@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
 /*var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
@@ -35,7 +33,6 @@ app.post('/action_page', function(req,res,next){
     });
     res.redirect('/');
 }); */
->>>>>>> origin/master
 var express = require('express');
 var exphbs  = require('express-handlebars');
 
@@ -73,4 +70,7 @@ app.get("/order",function(req,res){
     res.render('order',{userName:"Vanessa"});
 });
 
+app.get("/thanks",function(req,res){
+    res.render('thanks',{userName:"Vanessa"});
+});
 app.listen(3025);
